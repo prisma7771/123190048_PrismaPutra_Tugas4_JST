@@ -37,25 +37,28 @@ disp("Dilakukan pelatihan satu per satu input variabel dengan fungsi learnp")
 disp("Untuk Inputan 1 dengan X1=1 dan X2=1:")
 output1 = sim(net,p1)
 error1 = t1 - output1
-% Nilai dW didapat dari e*p
+disp("Nilai dW(Difference Weight/Perbedaan Bobot didapat dari e*p")
 dW = learnp(bobot,p1,[],[],[],[],error1,[],[],[],[],[])
 bobot = bobot + dW
 
 disp("Untuk Inputan 2 dengan X1=1 dan X2=0:")
 output2 = sim(net,p2)
 error2 = t2 - output2
+disp("Nilai dW(Difference Weight/Perbedaan Bobot didapat dari e*p")
 dW = learnp(bobot,p2,[],[],[],[],error2,[],[],[],[],[])
 bobot = bobot + dW
 
 disp("Untuk Inputan 3 dengan X1=0 dan X2=1:")
 output3 = sim(net,p3)
 error3 = t3 - output3
+disp("Nilai dW(Difference Weight/Perbedaan Bobot didapat dari e*p")
 dW = learnp(bobot,p3,[],[],[],[],error3,[],[],[],[],[])
 bobot = bobot + dW
 
 disp("Untuk Inputan 4 dengan X1=0 dan X2=0:")
 output4 = sim(net,p4)
 error4 = t4 - output4
+disp("Nilai dW(Difference Weight/Perbedaan Bobot didapat dari e*p")
 dW = learnp(bobot,p4,[],[],[],[],error4,[],[],[],[],[])
 bobot = bobot + dW
 
@@ -65,6 +68,7 @@ target = t
 error = t-output
 perfomance = perform(net,t,output,{1})
 
+disp("Untuk menyingkat proses pelatihan bisa digunakan fungsi train matlab")
 disp("Akan ditampilkan window baru di mana user bisa melihat proses training dalam bentuk GUI")
 disp("Anda dapat menekan tombol perfomance untuk melihat grafik error dan perubahan bobot(epoch)")
 disp(" ")
